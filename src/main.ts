@@ -38,3 +38,7 @@ if(hiba==0){
     console.log("Hibás adat!")
 }
 };
+function init() {
+    document.getElementById('submit')!.addEventListener('click',fizetes);
+};
+document.addEventListener('DOMContentLoaded',init);

@@ -7,7 +7,7 @@ let bankPattern = /[0-9]{4,4}-[0-9]{4,4}-[0-9]{4,4}-[0-9]{4,4}/g;
 let codePattern = /[0-9]{3,3}/;
 let bankkardnamePattern = /[a-z ]{1,}/gi
 
-document.getElementById('fizet')!.addEventListener("click", () => {
+function fizetes() {
     console.log("test");
     let hiba :number = 0;
     let name = document.getElementById('name') as HTMLInputElement | null;
@@ -71,4 +71,9 @@ document.getElementById('fizet')!.addEventListener("click", () => {
     }else{
         alert("Hibás adat!");
     }
-});
+};
+
+function init() {
+    document.getElementById('fizet')!.addEventListener('click',fizetes);
+}
+document.addEventListener('DOMContentLoaded',init);
